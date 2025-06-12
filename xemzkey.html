@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Terkunci</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: #f2f2f2;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Masukkan Password</h2>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="checkPassword()">Masuk</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      const correctPassword = "55"; // ganti password sesuai kebutuhan
+      if (password === correctPassword) {
+        window.location.href = "https://link-rahasia-anda.com"; // ganti dengan link tujuan
+      } else {
+        document.getElementById('error').textContent = "Password salah!";
+      }
+    }
+  </script>
+</body>
+</html>
